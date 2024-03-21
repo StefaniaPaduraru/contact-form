@@ -1,17 +1,6 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-const express = require('express');
-const app = express();
-
-app.use(express.static(__dirname));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
 module.exports = (req, res) => {
     const { name, email, message } = req.body;
 
