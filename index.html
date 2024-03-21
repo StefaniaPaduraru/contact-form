@@ -33,7 +33,7 @@
         event.preventDefault(); // prevent the form from submitting normally
         // Send an AJAX request
         $.ajax({
-        url: '/send-email', // The URL to send the request to
+        url: '/api/send-email', // The URL to send the request to
         type: 'post', // The type of HTTP method to use for the request
         data: $(this).serialize(), // The data to send to the server, serialized into a string
         success: function(){
