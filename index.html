@@ -29,6 +29,7 @@
     <script>
         $(document).ready(function(){
         $("#contact-form").submit(function(event){
+            event.preventDefault();
             var name = $("#name").val();
             var regex = /^[a-zA-Z\s]*$/; // regex for only letters and spaces
             if(!regex.test(name)){
